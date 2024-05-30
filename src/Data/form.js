@@ -30,10 +30,10 @@ export const form = [
       name: 'Rafeeq',
       message: 'Good evening'
     },
-    // {
-    //   id: 6,
-    //   image: images[14],
-    //   name: 'Abdul Kalam',
-    //   message: 'Good night'
-    // }
+    {
+      id: 6,
+      image: images[14],
+      name: 'Abdul Kalam',
+      message: 'Good night'
+    }
   ];
