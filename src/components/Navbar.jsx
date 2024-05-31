@@ -1,40 +1,37 @@
-import React from 'react';
-import { IoIosArrowForward } from "react-icons/io";
-import { MdOutlineSettingsVoice } from "react-icons/md";
+import React from 'react'
+import { Link, Element } from 'react-scroll'
 import { images } from '../Data/imagePage';
-import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <div className='flex flex-col md:flex-row bg-[#161B1C] w-fit p-5 text-white space-x-5 px-6 py-14'>
-      <div>
-        <div className='mb-10'>
-          <img src={images[0]} alt='logo' className='bg-white rounded-full p-2' />
-        </div>
-        <div className='mb-10 py-20 space-y-10 w-10'>
-          <Link to='/CatBort'>
-            <img src={images[1]} alt='Chats' />
-          </Link>
-          <Link to='/Call'>
-            <img src={images[3]} alt='Call' />
-          </Link>
-          <Link to='/Contact'>
-            <img src={images[2]} alt='Contact' />
-          </Link>
-          <Link to='/Settings'>
-            <img src={images[4]} alt='Settings' />
-          </Link>
-          <Link to='/Loop'>
-            <img src={images[5]} alt='Loop' />
-          </Link>
-        </div>
-        <div className='mt-28 space-y-4 w-10'>
-          <img src={images[7]} alt='Icons' className='bg-slate-500 rounded-full p-2' />
-          <img src={images[6]} alt='Profile' className='rounded-full' />
-        </div>
+    <div className='flex flex-col bg-[#161B1C] w-fit text-white space-y-28 px-6 h-screen justify-evenly'>
+
+      <div className=''>
+        <img src={images[0]} alt='logo' className='bg-white rounded-full p-2' />
+      </div>
+      <div className='flex flex-col space-y-4 w-10 items-center'>
+        <Link to='contact-section' smooth={true} duration={500}>
+          <img src={images[1]} alt='Chats' />
+        </Link>
+        <Link to='output' smooth={true} duration={500}>
+          <img src={images[3]} alt='Call' />
+        </Link>
+        <Link to='output' smooth={true} duration={500}>
+          <img src={images[2]} alt='Contact' />
+        </Link>
+        <Link to='settings-section' smooth={true} duration={500}>
+          <img src={images[4]} alt='Settings' />
+        </Link>
+        <Link to='loop-section' smooth={true} duration={500}>
+          <img src={images[5]} alt='Loop' />
+        </Link>
+      </div>
+      <div className='space-y-4'>
+        <img src={images[7]} alt='Icons' className='bg-slate-500 rounded-full p-2' />
+        <img src={images[6]} alt='Profile' className='rounded-full w-10' />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

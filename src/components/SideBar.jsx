@@ -1,12 +1,12 @@
 import React from 'react';
 import { IoIosArrowForward } from "react-icons/io";
-import { images } from '../Data/imagePage'; 
+import { images } from '../Data/imagePage';
 import { form } from '../Data/form'
 
 const SideBar = () => {
   return (
     <div className='flex flex-col md:flex-row bg-[#161B1C] text-white px-1 py-auto h-screen'>
-    <div className='flex flex-col border-l-2 border-gray-600'>
+      <div className='flex flex-col border-l-2 border-gray-600'>
         <div className='border-b-2 border-gray-600 p-1 flex flex-col items-center'>
           <div className='space-x-3 flex items-center '>
             <img src={images[8]} alt="profile" className='w-11 rounded-full' />
@@ -29,7 +29,7 @@ const SideBar = () => {
             <IoIosArrowForward size={10} />
           </div>
         </div>
-        <ul className="flex gap-4 p-1">
+        <ul className="flex gap-4 p-1 ">
           {[images[10], images[11], images[12], images[13], images[14]].map((src, index) => (
             <li key={index}>
               <img src={src} alt="profile" className='w-11 rounded-full' />
@@ -41,9 +41,9 @@ const SideBar = () => {
           <h1>Messages</h1>
           <p className='text-sm bg-[#2B6BC5] p-0 rounded-full w-10 text-center'>20</p>
         </div>
-        <ul className='p-1 space-y-10'>
+        <ul className='p-1 space-y-10 cursor-pointer'>
           {form.map((item) => (
-            <li className='flex justify-between items-center' key={item.id}>
+            <li className='flex justify-between items-center hover:bg-gray-700 hover:p-1 transition-all end-auto hover:rounded-lg' key={item.id}>
               <div className='flex items-center gap-2'>
                 <img src={item.image} alt="profile" className='w-11 rounded-full' />
                 <div className='flex flex-col'>

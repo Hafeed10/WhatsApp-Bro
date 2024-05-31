@@ -1,19 +1,20 @@
-
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar'; // Adjust the path as needed
+import './App.css'; // Include your CSS for section styling
 import SideBar from './components/SideBar';
-import CatBort from './components/CatBort';
-import ContactPage from './components/ContactPage';
+import CatBort from './components/CatBort'
+import ContactPage from './components/ContactPage.jsx'
 
 
-const App = () => {
+function App() {
   return (
-    <div className='flex justify-between'>
-      <Navbar/>
-      <SideBar/>
-      <CatBort/>
-      <ContactPage/>
-     
+    <div className="flex  h-screen bg-[#161B1C]">
+      <Navbar />
+      <SideBar />
+      <CatBort />
+      <ContactPage />
+
+
     </div>
   );
 }
